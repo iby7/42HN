@@ -28,9 +28,7 @@ void ft_rev_int_tab(int *tab, int size)
         tab[i] = temp;
         i++;
     }
-    
 }
-
 int main()
 {
     int k = 0;
