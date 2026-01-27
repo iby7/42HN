@@ -6,7 +6,7 @@
 /*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 20:47:59 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/01/27 22:51:01 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/01/27 22:53:26 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void ft_sort_int_tab(int *tab, int size)
             temp = tab[i+1];
             tab[i+1] = tab[i];
             tab[i] = temp;
-            i++;
             ft_sort_int_tab(tab, size);  
         }       
     }
