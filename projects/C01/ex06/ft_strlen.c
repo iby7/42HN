@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 12:16:57 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/01/28 13:22:19 by ibtunc           ###   ########.fr       */
+/*   Created: 2026/01/27 12:10:31 by ibtunc            #+#    #+#             */
+/*   Updated: 2026/01/27 12:15:40 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
+#include <stdio.h>
+
+int	ft_strlen(char *str)
 {
 	int	i;
-	int	l;
-	int	temp;
 
 	i = 0;
-	l = size;
-	while (i < size / 2)
+	while (*str)
 	{
-		l--;
-		temp = tab[l];
-		tab[l] = tab[i];
-		tab[i] = temp;
+		str++;
 		i++;
 	}
+	return (i);
 }
+/*int	main(void)
+{
+	printf("%d", ft_strlen("test"));
+	return (0);
+}
+*/
