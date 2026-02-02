@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/28 13:43:24 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/01/28 19:59:22 by ibtunc           ###   ########.fr       */
+/*   Created: 2026/02/02 11:34:05 by ibtunc            #+#    #+#             */
+/*   Updated: 2026/02/02 12:05:34 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <unistd.h>
-#include <stdio.h>*/
+#include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_alpha(char *str)
 {
-	int k;
-
-	k = 0;
-	while (src[k] != '\0')
+	while (*(str++))
 	{
-		dest[k] = src[k];
-		//printf("%c\n", dest[k]);
-		k++;
+		if(*str >= '0' && *str <= '9')
+		{
+			if(*(str + 1) == '\0')
+			{
+				return 1;
+			}
+		}
+		else
+		{
+			return 0;
+		}
 	}
-	dest[k] = '\0';
-	return (dest);
-	
 }
 
-/*int main(void)
-{	
-	char* dest;
-	char* src;
-	char t1[4] = "test";
-	char t2[4] = "abcd";
-	
-	dest = t1;
-	src = t2;
-	ft_strcpy(t1, t2);
-}*/
+int main(void)
+{
+	char* test0 = "084ab02";
+	char* test1 = "ab";
+	char* test2 = "012354984430352620";
+	char* test3 = "";
+
+	printf("%d\n", ft_str_is_alpha(test2));
+}
