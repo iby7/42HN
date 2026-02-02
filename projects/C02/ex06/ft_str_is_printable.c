@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/02 11:34:05 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/02 20:12:54 by ibtunc           ###   ########.fr       */
+/*   Created: 2026/02/02 12:21:21 by ibtunc            #+#    #+#             */
+/*   Updated: 2026/02/02 13:29:16 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_printable(char *str)
 {
 	while (*str)
 	{
-		if(!(*str >= 'A' && *str <= 'Z' || *str >= 'a' && *str <= 'z'))
+		if(!(*str >= 33 && *str <= 126))
 		{
 			return 0;
 		}
@@ -24,13 +22,3 @@ int	ft_str_is_alpha(char *str)
 	}
 	return 1;
 }
-
-/*int main(void)
-{
-	char* test0 = "084ab02";
-	char* test1 = "ab";
-	char* test2 = "012354984430352620";
-	char* test3 = "";
-
-	printf("%d\n", ft_str_is_alpha(test2));
-}*/

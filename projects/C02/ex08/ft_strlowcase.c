@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/02 11:34:05 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/02 20:12:54 by ibtunc           ###   ########.fr       */
+/*   Created: 2026/02/02 12:44:59 by ibtunc            #+#    #+#             */
+/*   Updated: 2026/02/02 13:22:53 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-
-int	ft_str_is_alpha(char *str)
+char	*ft_strlowcase(char *str)
 {
 	while (*str)
 	{
-		if(!(*str >= 'A' && *str <= 'Z' || *str >= 'a' && *str <= 'z'))
+		if(*str >= 'A' && *str <= 'Z')
 		{
-			return 0;
+			*str = *str + 31;
 		}
 		str++;
 	}
-	return 1;
+	return str;
 }
-
-/*int main(void)
-{
-	char* test0 = "084ab02";
-	char* test1 = "ab";
-	char* test2 = "012354984430352620";
-	char* test3 = "";
-
-	printf("%d\n", ft_str_is_alpha(test2));
-}*/
