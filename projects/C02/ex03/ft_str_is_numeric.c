@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 12:07:42 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/02 20:12:52 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/03 13:27:26 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@ int	ft_str_is_numeric(char *str)
 {
 	while (*str)
 	{
-		if(!(*str >= '0' && *str <= '9'))
+		if (!(*str >= '0' && *str <= '9'))
 		{
-			return 0;
+			return (0);
 		}
 		str++;
 	}
-	return 1;
+	return (1);
 }

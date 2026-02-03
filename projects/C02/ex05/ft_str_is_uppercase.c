@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 12:19:12 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/02 13:29:07 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/03 13:27:18 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@ int	ft_str_is_uppercase(char *str)
 {
 	while (*str)
 	{
-		if(!(*str >= 'A' && *str <= 'Z'))
+		if (!(*str >= 'A' && *str <= 'Z'))
 		{
-			return 0;
+			return (0);
 		}
 		str++;
 	}
-	return 1;
+	return (1);
 }

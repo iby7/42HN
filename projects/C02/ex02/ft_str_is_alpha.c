@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 11:34:05 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/02 20:12:54 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/03 13:27:30 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ int	ft_str_is_alpha(char *str)
 {
 	while (*str)
 	{
-		if(!(*str >= 'A' && *str <= 'Z' || *str >= 'a' && *str <= 'z'))
+		if (!(*str >= 'A' && *str <= 'Z' || *str >= 'a' && *str <= 'z'))
 		{
-			return 0;
+			return (0);
 		}
 		str++;
 	}
-	return 1;
+	return (1);
 }
 
 /*int main(void)

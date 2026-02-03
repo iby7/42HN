@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 12:17:35 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/02 13:28:53 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/03 13:27:22 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@ int	ft_str_is_lowercase(char *str)
 {
 	while (*str)
 	{
-		if(!(*str >= 'a' && *str <= 'z'))
+		if (!(*str >= 'a' && *str <= 'z'))
 		{
-			return 0;
+			return (0);
 		}
 		str++;
 	}
-	return 1;
+	return (1);
 }
