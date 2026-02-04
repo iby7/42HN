@@ -1,45 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/28 20:03:34 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/04 15:38:46 by ibtunc           ###   ########.fr       */
+/*   Created: 2026/02/04 16:34:53 by ibtunc            #+#    #+#             */
+/*   Updated: 2026/02/04 18:45:49 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int ft_strcmp(char *s1, char *s2)
 {
-	unsigned int	k;
-
-	k = 0;
-	while (src[k] != '\0')
+	while(*s1 && (*s1 == *s2))
 	{
-		dest[k] = src[k];
-		k++;
+		s1++;
+		s2++;
 	}
-	dest[k] = '\0';
-	while (dest[k + 1] != '\0' && k < n)
-	{
-		dest[k] = '\0';
-		k++;
-	}
-	return (dest);
-}
-
-int	main(void)
-{
-	char *dest;
-	char *src;
-	char t1[8] = "test1236";
-	char t2[4] = "abcd";
-
-	dest = t1;
-	src = t2;
-	ft_strncpy(t1, t2, 1);
+	return(*s1 - *s2);
 }

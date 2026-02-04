@@ -1,45 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/28 20:03:34 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/04 15:38:46 by ibtunc           ###   ########.fr       */
+/*   Created: 2026/02/04 19:22:30 by ibtunc            #+#    #+#             */
+/*   Updated: 2026/02/04 22:53:53 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	unsigned int	k;
+	char *r;
+	unsigned int i;
 
-	k = 0;
-	while (src[k] != '\0')
+	i = 0;
+	r = dest;
+	while(*dest)
+		dest++;
+	while (*src && (i < nb))
 	{
-		dest[k] = src[k];
-		k++;
+		*dest = *src;
+		dest++;
+		src++;
+		i++;
 	}
-	dest[k] = '\0';
-	while (dest[k + 1] != '\0' && k < n)
-	{
-		dest[k] = '\0';
-		k++;
-	}
-	return (dest);
-}
-
-int	main(void)
-{
-	char *dest;
-	char *src;
-	char t1[8] = "test1236";
-	char t2[4] = "abcd";
-
-	dest = t1;
-	src = t2;
-	ft_strncpy(t1, t2, 1);
+	*dest = '\0';
+	return (r);
 }

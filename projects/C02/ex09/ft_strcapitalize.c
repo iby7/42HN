@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 12:46:19 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/03 13:32:28 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/04 15:34:58 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 char	*ft_strcapitalize(char *str)
 {
@@ -18,8 +18,27 @@ char	*ft_strcapitalize(char *str)
 	char	*r;
 
 	r = str;
-	i = 0;
 	while (*str)
+	{
+		if ((*str >= '0' && *str <= '9') || (*str >= 'a' && *str <= 'z'))
+		{
+			i = 1;
+			if (*str >= 'a' && *str <= 'z')
+				*str = *str - 32;
+			while (i == 1 && *(str++))
+			{
+				if (*str >= 'A' && *str <= 'Z')
+					*str = *str + 32;	
+				else if (!((*str >= '0' && *str <= '9') || (*str >= 'a' && *str <= 'z')))
+					i = 0;
+			}
+		}
+		str++;
+	}
+	return (r);	
+}
+
+	/*while (*str)
 	{
 		if (*str >= '0' && *str <= '9' || *str >= 'a' && *str <= 'z'
 			|| *str >= 'A' && *str <= 'Z')
@@ -59,9 +78,9 @@ char	*ft_strcapitalize(char *str)
 		}
 	}
 	return (r);
-}
 
-/*int	main(void)
+
+int	main(void)
 {
 	char str[] = "hi, how are you? 42words forty-two; fifty+and+one";
 	// ft_strcapitalize(str);

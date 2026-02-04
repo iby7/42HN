@@ -1,45 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/28 20:03:34 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/04 15:38:46 by ibtunc           ###   ########.fr       */
+/*   Created: 2026/02/04 15:26:11 by ibtunc            #+#    #+#             */
+/*   Updated: 2026/02/04 19:32:33 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	k;
-
+	
 	k = 0;
-	while (src[k] != '\0')
+	if(size > 0)
 	{
-		dest[k] = src[k];
-		k++;
-	}
-	dest[k] = '\0';
-	while (dest[k + 1] != '\0' && k < n)
-	{
+		while(k < (size - 1) && src[k] != '\0')
+		{
+			dest[k] = src[k];
+			k++;
+		}
 		dest[k] = '\0';
-		k++;
 	}
-	return (dest);
-}
-
-int	main(void)
-{
-	char *dest;
-	char *src;
-	char t1[8] = "test1236";
-	char t2[4] = "abcd";
-
-	dest = t1;
-	src = t2;
-	ft_strncpy(t1, t2, 1);
+	while (src[k] != '\0')
+        k++;
+	return k;
 }
