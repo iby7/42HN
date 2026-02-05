@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 23:22:22 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/04 23:26:22 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/05 13:58:02 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putstr(char *str)
-{	
-	while(*str)
+void	ft_putstr(char *str)
+{
+	while (*str)
 	{
 		write(1, str, 1);
 		str++;

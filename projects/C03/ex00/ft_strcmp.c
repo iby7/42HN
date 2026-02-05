@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 16:34:53 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/04 18:45:49 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/05 10:33:22 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-	while(*s1 && (*s1 == *s2))
+	while (*s1 && (*s1 == *s2))
 	{
 		s1++;
 		s2++;
 	}
-	return(*s1 - *s2);
+	return (*s1 - *s2);
 }

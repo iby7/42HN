@@ -6,19 +6,22 @@
 /*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 12:37:24 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/03 13:27:12 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/05 15:26:54 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strupcase(char *str)
 {
+	char	*r;
+
+	r = str;
 	while (*str)
 	{
 		if (*str >= 'a' && *str <= 'z')
 		{
-			*str = *str - 31;
+			*str = *str - 32;
 		}
 		str++;
 	}
-	return (str);
+	return (r);
 }

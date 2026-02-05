@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:46:26 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/04 19:30:45 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/05 10:42:32 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	unsigned int k;
+	unsigned int	k;
 
-	k = 0;
+	k = 1;
 	if (n == 0)
-		return 0;
-	while(k < n && *s1 && (*s1 == *s2) )
+		return (0);
+	while (k < n && *s1 && (*s1 == *s2))
 	{
 		s1++;
 		s2++;
 		k++;
 	}
-	return(*s1 - *s2);
+	return (*s1 - *s2);
 }

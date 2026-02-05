@@ -3,43 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 20:03:34 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/04 15:38:46 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/05 10:27:28 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <unistd.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	k;
 
 	k = 0;
-	while (src[k] != '\0')
+	while ((src[k] != '\0') && k < n)
 	{
 		dest[k] = src[k];
 		k++;
 	}
-	dest[k] = '\0';
-	while (dest[k + 1] != '\0' && k < n)
+	while (k < n)
 	{
 		dest[k] = '\0';
 		k++;
 	}
 	return (dest);
-}
-
-int	main(void)
-{
-	char *dest;
-	char *src;
-	char t1[8] = "test1236";
-	char t2[4] = "abcd";
-
-	dest = t1;
-	src = t2;
-	ft_strncpy(t1, t2, 1);
 }

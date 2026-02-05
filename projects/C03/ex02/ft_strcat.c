@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 19:08:24 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/04 19:25:05 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/05 10:33:33 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *dest, char *src)
 {
-	char *r;
+	char	*r;
 
 	r = dest;
-	while(*dest)
+	while (*dest)
 		dest++;
 	while (*src)
 	{

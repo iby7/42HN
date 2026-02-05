@@ -3,32 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 19:31:16 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/04 20:52:18 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/05 12:05:10 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char *ft_strstr(char *str, char *to_find)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int i;
+	int	i;
 
-	if(!(*to_find))
-		return str;
-	while(*str)
+	if (!(*to_find))
+		return (str);
+	while (*str)
 	{
 		i = 0;
-		while(str[i] == to_find[i])
+		while (str[i] == to_find[i])
 		{
 			i++;
-			if(to_find[i] == '\0')
-				return(str);
+			if (to_find[i] == '\0')
+				return (str);
 		}
-		str++;		
+		str++;
 	}
-	//darf ich das?
-	return(NULL);
+	return (0);
 }

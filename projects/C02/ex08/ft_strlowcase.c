@@ -6,19 +6,22 @@
 /*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 12:44:59 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/03 13:27:08 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/05 15:26:58 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strlowcase(char *str)
 {
+	char	*r;
+
+	r = str;
 	while (*str)
 	{
 		if (*str >= 'A' && *str <= 'Z')
 		{
-			*str = *str + 31;
+			*str = *str + 32;
 		}
 		str++;
 	}
-	return (str);
+	return (r);
 }
