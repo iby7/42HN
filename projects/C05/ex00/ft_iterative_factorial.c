@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/04 23:18:58 by ibtunc            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/02/05 13:58:05 by ibtunc           ###   ########.fr       */
-=======
-/*   Updated: 2026/02/08 15:01:28 by ibtunc           ###   ########.fr       */
->>>>>>> ecff557 (add new projects and ex)
+/*   Created: 2026/02/06 09:23:29 by ibtunc            #+#    #+#             */
+/*   Updated: 2026/02/06 10:01:07 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#include <stdio.h>
 
-	i = 0;
-	while (*str)
-		i++;
-	return (i);
+int ft_iterativ_factorial(int nb)
+{
+	int r;
+	
+	r = nb;
+	if(nb > 0)
+	{
+		while(nb--)
+		{
+			r = r * nb;
+		}
+		return(r);
+	}
+	else
+		return(0);
 }
+
+/*int main()
+{
+	printf("%d", ft_iterativ_factorial(6));
+}*/

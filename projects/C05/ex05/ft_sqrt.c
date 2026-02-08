@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/04 23:18:58 by ibtunc            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/02/05 13:58:05 by ibtunc           ###   ########.fr       */
-=======
-/*   Updated: 2026/02/08 15:01:28 by ibtunc           ###   ########.fr       */
->>>>>>> ecff557 (add new projects and ex)
+/*   Created: 2026/02/08 19:22:38 by ibtunc            #+#    #+#             */
+/*   Updated: 2026/02/08 20:42:45 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#include <stdio.h>
 
-	i = 0;
-	while (*str)
+int ft_sqrt(int nb)
+{
+	int i;
+
+	i = 1;
+	while(i * i <= nb)
+	{
+		if(i * i == nb)
+			return(i);
 		i++;
-	return (i);
+	}
+	return(0);
+}
+
+int main()
+{
+	printf("%d", ft_sqrt(-56));
+	return 0;
 }

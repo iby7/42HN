@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/04 23:18:58 by ibtunc            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/02/05 13:58:05 by ibtunc           ###   ########.fr       */
-=======
-/*   Updated: 2026/02/08 15:01:28 by ibtunc           ###   ########.fr       */
->>>>>>> ecff557 (add new projects and ex)
+/*   Created: 2026/02/08 19:21:46 by ibtunc            #+#    #+#             */
+/*   Updated: 2026/02/08 19:21:52 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_fibonacci(int index)
 {
-	int	i;
-
-	i = 0;
-	while (*str)
-		i++;
-	return (i);
+	if (index < 0)
+		return (-1);
+	if (index == 0)
+		return (0);
+	if (index == 1)
+		return (1);
+	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }

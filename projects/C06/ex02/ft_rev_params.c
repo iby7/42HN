@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/04 23:18:58 by ibtunc            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/02/05 13:58:05 by ibtunc           ###   ########.fr       */
-=======
-/*   Updated: 2026/02/08 15:01:28 by ibtunc           ###   ########.fr       */
->>>>>>> ecff557 (add new projects and ex)
+/*   Created: 2026/02/08 22:54:15 by ibtunc            #+#    #+#             */
+/*   Updated: 2026/02/08 23:16:15 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#include <unistd.h>
 
-	i = 0;
-	while (*str)
+int main(int argc, char *argv[])
+{
+	char* p;
+	int i;
+
+	(void)argc;
+	i = 1;
+	while(argv[i])
 		i++;
-	return (i);
+	while (i > 1)
+	{
+		p = argv[i - 1];
+		while(*p)
+		{
+			write(1, p, 1);
+			p++;
+		}
+		write(1, "\n", 1);
+		i--;
+	}
+	return 0;
 }
