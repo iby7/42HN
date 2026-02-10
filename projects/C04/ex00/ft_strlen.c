@@ -6,11 +6,7 @@
 /*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 23:18:58 by ibtunc            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/02/05 13:58:05 by ibtunc           ###   ########.fr       */
-=======
-/*   Updated: 2026/02/08 15:01:28 by ibtunc           ###   ########.fr       */
->>>>>>> ecff557 (add new projects and ex)
+/*   Updated: 2026/02/09 14:29:29 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +16,9 @@ int	ft_strlen(char *str)
 
 	i = 0;
 	while (*str)
+	{
 		i++;
+		str++;
+	}
 	return (i);
 }
