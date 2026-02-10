@@ -1,49 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/08 23:42:17 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/10 22:21:10 by ibtunc           ###   ########.fr       */
+/*   Created: 2026/02/10 22:12:33 by ibtunc            #+#    #+#             */
+/*   Updated: 2026/02/10 22:41:21 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 
-int	*ft_range(int min, int max)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	int	*arr;
-	int	i;
+	int len;
+	int i;
 
 	i = 0;
-	if (min >= max)
-		return (NULL);
-	arr = malloc(((max - min) + 1) * 4);
-	if(!arr)
-		return (0);
-	while (max - min > 0)
+	if(min >= max)
+		{
+			*range = NULL;
+			return (0);
+		}
+	else
+		*range = (int *)malloc((max - min) * 4);
+	if (!*range)
+		return (-1);
+	while(min < max)
 	{
-		arr[i] = min;
+		(*range)[i] = min;
 		min++;
 		i++;
 	}
-	arr[i] = '\0';
-	return (arr);
-}
-
-int	main(void)
-{
-	int	*arr;
-
-	arr = ft_range(3, 6);
-	while (*arr)
-	{
-		printf("%d", *arr);
-		arr++;
-	}
-	return (0);
+	*range[i] = '\0';
 }
