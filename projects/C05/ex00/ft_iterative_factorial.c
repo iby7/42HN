@@ -3,33 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 09:23:29 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/06 10:01:07 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/10 14:01:32 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_iterativ_factorial(int nb)
+int	ft_iterative_factorial(int nb)
 {
-	int r;
-	
+	int	r;
+
 	r = nb;
-	if(nb > 0)
+	if (nb == 0)
+		return (1);
+	if (nb > 0)
 	{
-		while(nb--)
+		while (nb > 1)
 		{
-			r = r * nb;
+			r = r * (nb - 1);
+			nb--;
 		}
-		return(r);
+		return (r);
 	}
 	else
-		return(0);
+		return (0);
 }
 
 /*int main()
 {
-	printf("%d", ft_iterativ_factorial(6));
+	printf("%d", ft_iterative_factorial(0));
+	return (0);
 }*/
