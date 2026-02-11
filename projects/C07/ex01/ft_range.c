@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 23:42:17 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/10 22:21:10 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/11 11:19:57 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	*ft_range(int min, int max)
 	if (min >= max)
 		return (NULL);
 	arr = malloc(((max - min) + 1) * 4);
-	if(!arr)
+	if (!arr)
 		return (0);
 	while (max - min > 0)
 	{
@@ -35,7 +35,7 @@ int	*ft_range(int min, int max)
 	return (arr);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	*arr;
 
@@ -46,4 +46,4 @@ int	main(void)
 		arr++;
 	}
 	return (0);
-}
+}*/

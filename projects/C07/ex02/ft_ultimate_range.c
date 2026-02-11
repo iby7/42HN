@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 22:12:33 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/10 22:41:21 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/11 15:25:24 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,30 @@
 
 int	ft_ultimate_range(int **range, int min, int max)
 {
-	int len;
-	int i;
+	int	i;
+	int size;
 
+	size = max - min;
 	i = 0;
-	if(min >= max)
-		{
-			*range = NULL;
-			return (0);
-		}
+	if (min >= max)
+	{
+		*range = NULL;
+		return (0);
+	}
 	else
-		*range = (int *)malloc((max - min) * 4);
+		*range = (int *)malloc(size * 8);
 	if (!*range)
 		return (-1);
-	while(min < max)
+	while (i < size)
 	{
-		(*range)[i] = min;
-		min++;
+		(*range)[i] = min + i;
 		i++;
 	}
-	*range[i] = '\0';
+	return (size);
 }
+
+/*int main()
+{	
+	printf("%d", ft_ultimate_range());
+	return 0;
+}*/

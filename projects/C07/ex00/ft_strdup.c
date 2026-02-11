@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 23:27:33 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/10 21:58:50 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/11 11:52:35 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,19 @@ char	*ft_strdup(char *src)
 	int		i;
 
 	i = 0;
-	while (src[i])
-		i++;
-	str = (char *)malloc(i + 1);
-	if (!dup)
+	str = (char *)malloc((sizeof(src)) * sizeof(char));
+	if (!str)
 		return (0);
-	i = 0;
 	while (src[i])
 	{
 		str[i] = src[i];
 		i++;
 	}
-	src[i] = '\0';
+	str[i] = '\0';
 	return (str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	*str;
 
@@ -45,4 +42,4 @@ int	main(void)
 		str++;
 	}
 	return (0);
-}
+}*/
