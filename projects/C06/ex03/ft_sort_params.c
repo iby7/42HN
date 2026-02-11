@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibtunc <ibtunc@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 12:31:23 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/10 21:44:56 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/11 10:50:47 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ void	bubble_sort(int argc, char **argv)
 
 void	print_params(char **argv)
 {
-	int i;
-	char* temp;
-	
+	int		i;
+	char	*temp;
+
 	i = 1;
 	while (argv[i])
 	{
@@ -67,7 +67,6 @@ void	print_params(char **argv)
 
 int	main(int argc, char *argv[])
 {
-	
 	bubble_sort(argc, argv);
 	print_params(argv);
 	return (0);
