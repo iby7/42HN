@@ -6,36 +6,42 @@
 /*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 22:28:46 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/10 14:19:42 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/11 13:56:55 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_find_next_prime(int nb)
+int	ft_is_prime(int nb)
 {
 	int	i;
-	int	k;
 
-	k = 0;
+	if (nb < 2)
+		return (0);
 	i = 2;
+	if (nb > 1)
+	{
+		while (i * i <= nb)
+		{
+			if (nb % i == 0)
+				return (0);
+			i++;
+		}
+	}
+	return (1);
+}
+
+int	ft_find_next_prime(int nb)
+{
 	if (nb <= 1)
 		return (2);
-	while (i * i <= nb)
-	{
-		if (nb % i == 0)
-		{
-			nb++;
-			i = 2;
-		}
-		else
-			i++;
-	}
+	while (!ft_is_prime(nb))
+		nb++;
 	return (nb);
 }
 
 /*int	main(void)
 {
-	printf("%d\n", ft_find_next_prime(44));
+	printf("%d\n", ft_find_next_prime(2147483646));
 	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 12:21:21 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/05 15:25:13 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/11 10:28:40 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ int	ft_str_is_printable(char *str)
 {
 	while (*str)
 	{
-		if (*str >= 33 && *str <= 126)
+		if (*str >= 32 && *str <= 126)
 			str++;
 		else
 			return (0);

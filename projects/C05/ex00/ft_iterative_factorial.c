@@ -6,7 +6,7 @@
 /*   By: ibtunc <ibtunc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 09:23:29 by ibtunc            #+#    #+#             */
-/*   Updated: 2026/02/10 14:01:32 by ibtunc           ###   ########.fr       */
+/*   Updated: 2026/02/11 13:55:31 by ibtunc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ int	ft_iterative_factorial(int nb)
 
 /*int main()
 {
-	printf("%d", ft_iterative_factorial(0));
+	printf("%d", ft_iterative_factorial(-3));
 	return (0);
 }*/
